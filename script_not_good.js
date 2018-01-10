@@ -48,7 +48,7 @@ Menu.prototype.render = function(){
 	newUl.id = this.id;
 	parent.appendChild(newUl);
 	//последовательно перебираем элементы полученного
-	//массива пунктов меню, что бы из них создавать 
+	//массива пунктов меню, что бы из них создавать
 	//соответсвуюшие узлы в DOM
 	for(var i = 0 ; i < this.items.length; i++){
 		//проверим, является ли полученный item экземпляром
@@ -59,14 +59,14 @@ Menu.prototype.render = function(){
 		}
 	}
 }
-//научим сущность Menu удалять какие то 
+//научим сущность Menu удалять какие то
 //элементы внутри себя по id
 Menu.prototype.remove = function(IdremoveElement){
 	var removeElement = document.getElementById(IdremoveElement);
 	removeElement.parentNode.removeChild(removeElement);
 }
 
-function MenuItem(myParentId, myId , 
+function MenuItem(myParentId, myId ,
 									myClass, myItems , myHref , myLabel ){
 	Container.call(this);
 	this.className = myClass;
@@ -82,7 +82,7 @@ MenuItem.prototype = Object.create(Container.prototype);
 MenuItem.prototype.constructor = MenuItem;
 
 MenuItem.prototype.render = function(){
-	//найти родителя в него построить элемент 
+	//найти родителя в него построить элемент
 	var parent = document.getElementById(this.myParentId);
 	var newLi = document.createElement('li');
 	var newA = document.createElement('a');
@@ -106,7 +106,7 @@ MenuItem.prototype.render = function(){
 	}
 }
 //класс для подпунктов
-function SubMenuItem(myParentId, myId , 
+function SubMenuItem(myParentId, myId ,
 									myClass, myItems , myHref , myLabel ){
 	Container.call(this);
 	this.className = myClass;
@@ -122,7 +122,7 @@ MenuItem.prototype = Object.create(Container.prototype);
 MenuItem.prototype.constructor = MenuItem;
 
 MenuItem.prototype.render = function(){
-	//найти родителя в него построить элемент 
+	//найти родителя в него построить элемент
 	var parent = document.getElementById(this.myParentId);
 	var newLi = document.createElement('li');
 	var newA = document.createElement('a');
@@ -158,7 +158,7 @@ MenuItem.prototype.render = function(){
 */
 /**
 *сущность SubMenu ведёт себя почти идентично Menu
-*но её надо научить монтироваться не в body, а 
+*но её надо научить монтироваться не в body, а
 *в указанный по идентификатору элемент меню
 */
 function SubMenu(myId , myClass , mySubItems , myParentId ){

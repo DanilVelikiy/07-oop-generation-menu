@@ -59,7 +59,7 @@ Menu.prototype.render = function () {
 	newUl.id = this.id;
 	parent.appendChild(newUl);
 	//последовательно перебираем элементы полученного
-	//массива пунктов меню, что бы из них создавать 
+	//массива пунктов меню, что бы из них создавать
 	//соответсвуюшие узлы в DOM
 	for (var i = 0; i < this.items.length; i++) {
 		//проверим, является ли полученный item экземпляром
@@ -70,7 +70,7 @@ Menu.prototype.render = function () {
 		}
 	}
 }
-//научим сущность Menu удалять какие то 
+//научим сущность Menu удалять какие то
 //элементы внутри себя по id
 Menu.prototype.remove = function (IdremoveElement) {
 	var removeElement = document.getElementById(IdremoveElement);
@@ -91,7 +91,7 @@ MenuItem.prototype.constructor = MenuItem;
 
 MenuItem.prototype.render = function () {
 	//надо найти родительский ul с нужным классом
-	//или идентификатором и в него построить элемент 
+	//или идентификатором и в него построить элемент
 	// меню li
 	var parent = document.getElementById(this.parentId);
 	console.log(parent);
