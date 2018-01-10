@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>JavaScript oop menu generation</title>
 	<link rel="stylesheet" href="style.css">
 </head>
+
 <body class="b-body">
 	<div id="wrapper-menu"></div>
 	<script src="script.js"></script>
 	<script>
-	window.onload = function(){
+		window.onload = function() {
 
-			var menuItem1 = new MenuItem('/' , 'Главная' , 'menu' , 'main' );
-			var menuItem2 = new MenuItem('/catalog' , 'Каталог' , 'menu' , 'catalog' );
-			var menuItem3 = new MenuItem('/blog' , 'Блог' , 'menu' , 'blog' );
+			var menuItem1 = new MenuItem('/', 'Главная', 'menu', 'main');
+			var menuItem2 = new MenuItem('/catalog', 'Каталог', 'menu', 'catalog');
+			var menuItem3 = new MenuItem('/blog', 'Блог', 'menu', 'blog');
 
-			var menu = new Menu('wrapper-menu' , 'menu' , 'menu' , [menuItem1 , menuItem2 , menuItem3] );
+			var menu = new Menu('wrapper-menu', 'menu', 'menu', [menuItem1, menuItem2, menuItem3]);
 
 			menu.render();
 
 			//menu.remove('menuitem3');
 		}
+
 	</script>
 </body>
+
 </html>
 <!-- Soli Deo Gloria -->
