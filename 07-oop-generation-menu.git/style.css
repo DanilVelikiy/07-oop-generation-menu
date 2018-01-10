@@ -1,0 +1,27 @@
+.b-body {
+  margin-top: 5px; }
+
+.li-class {
+  width: 200px;
+  height: 30px;
+  background-color: gray;
+  border-radius: 5px;
+  list-style-type: none; }
+
+.a-class {
+  color: orange;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  line-height: 30px;
+  font-style: oblique;
+  font-size: 14px;
+  margin-top: 5px; }
+
+.menu {
+  text-align: center;
+  margin: 0 auto;
+  padding-left: 0;
+  width: 200px; }
+
+/*# sourceMappingURL=style.css.map */
